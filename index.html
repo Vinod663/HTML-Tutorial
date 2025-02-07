@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <!--<link rel="stylesheet" href="style/style.css">-->
+
+    <style>
+        /*<!--Internal CSS-->*/
+        /*selector{property: value; property: value; property: value}*/
+
+         /*Type Selector*/
+         /*h2{
+             color: white;
+             background: black;
+         }
+
+         h1{
+             color: white;
+             background: black;
+         }
+
+         !*ID selector*!
+         #special-topic{
+             background-color: beige;
+             color: red;
+         }
+
+         !*Class selector*!
+         .my-topic{
+             background-color: seagreen;
+         }*/
+
+      /*  !*Universal Selector*!
+        *{
+            color: seagreen;
+        }
+*/
+        /*!*Attribute Selector*!
+        [name]{
+            background-color: darkseagreen;
+        }
+        !*Attribute Selector with value*!
+        [name="name2"]{
+            color:red;
+        }*/
+
+        /*!*Attribute selector with start value*!
+        [href^="https"]{
+            background-color: seagreen;
+        }
+        !*Attribute selector with ending value*!
+        [href$=".lk"]{
+            background-color: darkseagreen;
+        }
+
+        !*Attribute selector with given value snippet*!
+        [href*="ijse"]{
+            background-color: red;
+        }*/
+
+        /*[href~="ijse"]{
+            background-color: khaki;
+        }
+
+        p[name]{
+            color:tomato;
+        }*/
+
+       /* !*Pseudo-class status*!*/
+           /* h1:hover{ !*hover is statement of h1 element*!
+                color: red;
+            }
+
+            !*h1 active state eka enakota style eka apply wei*!
+            h1:active{ !*when click the right click of mouse style start applying*!
+                color: darkorchid;
+            }
+
+            :hover{
+                color: greenyellow;
+            }
+
+            a:link{ !*visit karala natnm greenyellow color eka apply wela tiyenne*!
+                color: greenyellow;
+            }
+
+            a:visited{ !*visited wuna gamn red color eka apply wenawa link ekata aye back wunama*!
+                color: red;
+            }
+
+            input:focus{
+                background-color: orange;
+            }*/
+
+        /*Pseudo-class location*/
+
+        /*Pseudo first child*/
+        /*li:first-child{ !*list ekk select karan ekata first-child dunnama list ekee udama ekata witarai stylde eka apply wenne*!
+            color: darkorchid;
+        }
+
+        !*Pseudo last child*!
+        li:last-child{
+            color: coral;
+        }
+
+       !* we can use nth-child to catch n-child*!
+        li:nth-child(3){
+            color: blue;
+        }
+
+        li:nth-last-child(2){
+            background-color: greenyellow;
+        }*/
+
+        /*li:nth-child(odd){
+            background-color: blue;
+        }
+
+        li:nth-child(even){
+            background-color: greenyellow;
+        }
+
+        li:nth-child(n+4){
+            background-color: red;
+        }*/
+
+       /* li:nth-child(3n-1){
+            background-color: greenyellow;
+        }*/
+
+        /*li:nth-child(3n+1){
+            background-color: greenyellow;
+        }
+*/
+       /* li:nth-child(2n){
+            background-color: greenyellow;
+        }*/
+
+       /* --Pseudo Elements--*/
+       /* h1::before{
+            content: "🚩";
+        }
+
+        h1::after{
+            content: "🔅";
+        }*/
+
+        /*h1:first-letter{
+            color: blue;
+        }
+
+        p::first-line{
+            color: blue;
+        }
+
+        p::selection{
+            background: black;
+            color: greenyellow;
+        }
+
+        ::marker{
+            content: "🔅";
+        }
+
+        input::placeholder{
+            color: red;
+        }
+
+        input::file-selector-button{
+            color: white;
+            background: black;
+        }
+
+        input::file-selector-button:hover{
+            color: lawngreen;
+        }*/
+
+        /*--Grouping Selecter--*/
+
+/*h1,.my-item,#my-button,p{
+    color: darkmagenta;
+}*/
+
+    </style>
+</head>
+<body>
+   <!--1) Inline CSS
+   2) Internal CSS(Embedded CSS)
+   3) External CSS-->
+
+    <!--Inline CSS &#45;&#45; Only Writing the declaration that should apply to the element
+    <h1 style="color:lawngreen; background:black; text-align: center">Welcome to IJSE</h1>
+    <h2>Welcome to IJSE</h2>
+    <h3>Welcome to IJSE</h3>-->
+
+
+   <!--<h1 class="my-topic">Hello World!- 1</h1>
+   <p>Welcome to my website</p>
+
+   <h1>Hello World!- 2</h1>
+   <p>Welcome to my website</p>
+
+   <h1 id="special-topic">Hello World!- 3</h1>
+   <p>Welcome to my website</p>
+
+   <h1 class="my-topic">Hello World!- 4</h1>
+   <p>Welcome to my website</p>
+
+   <a href="https://www.ijse.lk">IJSE-1</a>
+   <a href="www.ijse.lk/" name="name1">IJSE-2</a>
+   <a href="http://www.ijse.com/">IJSE-3</a>
+   <a href="https://www.ijsesolutions.lk" name="name2">IJSE-4</a>
+   <a href="https://solutions.lk" >IJSE-5</a>
+   <a href="https://googleijsesolutions.lk" >IJSE-6</a>
+   <a href="https://google ijse solutions.lk" >IJSE-7</a>&lt;!&ndash;name samnyen a-href ekka use karann na , just for learn the theory&ndash;&gt;
+
+   <p name="name2">Welcome to IJSE</p>
+   <p >welcome to tech world</p>-->
+
+<!--    <h1>Hello World!</h1>
+
+    <a href="https://www.bolton.ac.uk/">Uobolton</a>
+    <a href="https://www.westminster.ac.uk/">Westminster</a>
+    <a href="https://www.cardiffmet.ac.uk/">Cardiffmet</a><br><br>
+
+    <input type="text">
+
+<ol>
+    <li>Java</li>
+    <li>Go</li>
+    <li>Net</li>
+    <li>C++</li>
+    <li>Python</li>
+    <li>Pearl</li>
+</ol>-->
+
+<!--<h1>Welcome to IJSE</h1>
+
+   <ol>
+       <li>A</li>
+       <li class="my-item">B</li>
+       <li>C</li>
+       <li class="my-item">D</li>
+       <li>E</li>
+   </ol>
+
+   <input type="text" placeholder="Enter Your Name"><br><br>
+   <input type="file" placeholder="Choose File"><br><br>
+   <button id="my-button">Click me</button>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim ipsa numquam similique veniam! Asperiores, aspernatur consequatur, dignissimos, ducimus eos esse illum libero mollitia nobis provident qui quis velit veniam!
+</p>-->
+
+</body>
+</html>

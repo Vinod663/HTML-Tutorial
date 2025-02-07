@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+        <!--
+        What are the Lists in HTML
+
+        1)Ordered List
+        2)Un-ordered List
+        3)Data List
+        4)Nested List
+        -->
+
+                                <!--Ordered List-
+                                <ol>- Ordered List tag
+                                <li>-List Item tag
+                                 -->
+
+    <!--
+    1.Java
+    2.Python
+    3.HTML
+    4.CSS
+    5.Javascript
+    -->
+
+<ol>        <!--Auto Numbers dala ordered List ekk hadagannawa-->
+    <li>Java</li>
+    <li>Python</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+</ol>
+
+        <ol start="10">  <!--start=""- patan ganna one keeweni nemer ekedi kiyala denawa-->
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+
+        <!--a for lowercase letters
+        A for uppercase letters
+        i for lowercase Roman numerals
+        I for uppercase Roman numerals
+        1 for numbers (default)
+        -->
+        <ol type="a">
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+
+        <ol type="i">
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+
+        <ol reversed="">       <!--Mokak hari atribute ekakata dena value eka boolean and eka true nam value eka denna one na
+                                    default enne ekoomath true, but false denna onenm eka metion karanna one type eka false kiyala deela-->
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+
+        <ol reversed="">       <!--Mokak hari atribute ekakata dena value eka boolean and eka true nam value eka denna one na
+                                    default enne ekoomath true standard eka tamaa true nm eeka den na samnyen-->
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+
+        <ol reversed type="a" start="10">
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+
+
+        /////////////////Un-Ordered List/////////////////////
+        /////////////////<ul></ul>-UnOrder List Element/////////////////////
+        /////////////////<li></li>-Listed Item Tag/////////////////////
+
+        <ul >
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+
+        <!--This attribute sets the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:
+
+        circle
+        disc
+        square-->
+
+        <ul type="circle">
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+
+        <!--/////////<dl>: The Description List element//////-->
+            <!--
+            Description List
+            <dl>- Description List Tag
+            <dt>- Description title TAg
+            <dd>-Description detail List
+            -->
+            <dl>
+                <dt>Frontend Technologies</dt>
+                <dd>HTML</dd>
+                <dd>CSS</dd>
+                <dd>Javascript</dd>
+                <dd>React</dd>
+                <dd>Angular</dd>
+                <dd>Vue</dd>
+                <dd>Remix</dd>
+
+                <dt>Backend Technologies</dt>
+                <dd>Node</dd>
+                <dd>Express</dd>
+                <dd>MongoDB</dd>
+                <dd>Mongoose</dd>
+                <dd>Java</dd>
+                <dd>Spring</dd>
+            </dl>
+
+//////////////Nested List//////////////
+
+<ul>
+    <li>Java</li>
+    <li>Project Management</li>
+    <li>
+        Internet Technologies
+        <ul>                      <!--Un-ordered List-->
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ul>
+    </li>
+    <li>
+        RAD                        <!--Ordered List-->
+        <ol>
+            <li>Node.js</li>
+            <li>React.js</li>
+            <li>React Native</li>
+        </ol>
+    </li>
+</ul>
+
+<ol>
+    <li>Sri Lanka</li>
+    <li>
+        India
+        <ol type="a" start="5">
+            <li>Western India</li>
+
+        <ul>
+            <li>Goa</li>
+            <li>Gujarat</li>
+            <ul type="disc">
+                <li>Area 1</li>
+                <li>Area 2</li>
+                <li>Area 3</li>
+                <li>Area 4</li>
+            </ul>
+        </ul>
+            <li>Easter India</li>
+            <li>Northern India</li>
+            <li>Southern India</li>
+            <ul type="circle">
+                <li>Kerala</li>
+                <li>Chennai</li>
+            </ul>
+        </ol>
+    </li>
+///////////////////////////////////////////////////////////////////////////////////////
+
+    <ol>
+        <li>Sri Lanka</li>
+        <li>India
+        <ol type="a" start="5">
+            <li>Western India
+            <p>Welcome to <b>Western India</b></p>
+            <ul type="square">
+                <li>Goa</li>
+                <p>Most <i>beautiful</i> area in the world</p>
+                <li>Gujarat
+                <ul type="disc">
+                    <li>Area 1</li>
+                    <li><mark>Area 2</mark></li>
+                    <li>Area 3</li>
+                    <li>Area 4</li>
+                </ul></li>
+            </ul></li>
+            <li>Eastern India</li>
+            <li>Northern India</li>
+            <li>Southern India
+            <ul type="circle">
+                <li>Kerala</li>
+                <li><h1>Chennai</h1></li>
+            </ul></li>
+        </ol></li>
+    </ol>
+
+
+
+</ol>
+
+
+</body>
+</html>

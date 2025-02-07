@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <!--<form>
+        &lt;!&ndash;input&ndash;&gt;
+        <input type="text" placeholder="Enter Your Name"><br><br>
+
+        <input type="number" placeholder="Enter Your Age"><br><br>
+
+        <input type="password" placeholder="Enter Your Password"><br><br>
+
+        <input type="email" placeholder="Enter Your Email"><br><br>
+
+        <input type="url" placeholder="Enter Your Website"><br><br>
+
+        <input type="search" placeholder="Enter Your Search"><br><br>
+
+        <input type="tel" placeholder="Enter Your Phone Number"><br><br>
+
+        <input type="checkbox" checked><br><br>
+
+        <input type="checkbox"><br><br>
+
+        <input type="radio" checked><br><br>
+
+        <input type="radio"<br><br>
+
+        <input type="range" ><br><br>
+
+        <input type="color" ><br><br>
+
+        <input type="date" max="2025-01-29" min="2025-01-05" ><br><br>
+
+        <input type="datetime-local" ><br><br>
+
+        <input type="time" ><br><br>
+
+        <input type="month" ><br><br>
+
+        <input type="week" ><br><br>
+
+        <input type="file" ><br><br>
+
+        <input type="image" src="../assets/Images/small.jpg" ><br><br>
+
+        <input type="button" value="Click me" ><br><br>
+
+        <input type="submit" value="Submit" ><br><br>
+
+        <input type="reset" value="Reset" ><br><br>
+
+        <input type="hidden" ><br><br>
+    </form>-->
+
+    <form action="http://localhost:8080/form" method="get"> <!--action eke deela tiyana path ekee tama bacjend eka tiyenne and eke tama data save wenne gihin-->
+        <div>
+            <label for="first-name">First Name</label><br>
+            <input type="text"
+                   id="first-name"
+                   placeholder="Enter Your  First Name"
+                   name="Firstname"
+            ><br><br>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="last-name">Last Name</label><br>
+            <input type="text"
+                   id="last-name"
+                   placeholder="Enter Your  Last Name"
+                   name="lastname"
+            ><br><br>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="address">Address</label><br>
+            <textarea
+                    id="address"
+                    placeholder="Enter your address"
+                    rows="10"
+                    cols="50"
+                    name="address"
+            ></textarea><br><br>
+        </div>
+
+        <!--Select-->
+        <div>
+            <label>Subject</label><br>
+            <select name="Subject">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+            </select><br><br>
+        </div>
+
+        <br>
+
+        <!--fieldset-->
+        <fieldset>
+            <legend>Status</legend>
+            <input type="radio" name="status" value="married"><label>Married</label>
+            <input type="radio" name="status" value="happy"><label>Still Happy</label>
+        </fieldset><br><br>
+        <br>
+
+        <!--datalist-->
+        <label for="country">Country</label>
+        <input type="text" id="country" list="country-list">
+
+        <datalist id="country-list">
+            <option value="usa">USA</option>
+            <option value="sri-lanka">Sri Lanka</option>
+            <option value="china">China</option>
+            <option value="japan">Japan</option>
+        </datalist><br><br>
+
+        <br>
+        <!--optgroup(Option Group)-->
+        <select>
+            <optgroup label="Asia">
+                <option value="india">India</option>
+                <option value="sri-lanka">Sri Lanka</option>
+                <option value="indonesia">Indonesia</option>
+            </optgroup>
+
+            <optgroup label="Europe">
+                <option value="uk">UK</option>
+                <option value="finland">Finland</option>
+                <option value="hungary">Hungary</option>
+            </optgroup>
+
+        </select><br><br>
+
+
+
+
+        <br>
+
+        <!--<input type="button" value="click">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">-->
+
+        <button type="button">Click</button>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button><br><br>
+
+
+    </form>
+
+<form oninput="result.value=parseInt(a.value) + parseInt(b.value)">
+    <!--Output-->
+    <input type="range" id="a" name="a">
+    <input type="number" id="b" name="b">
+
+    <output name="result">30</output><br><br>
+</form>
+
+<form>
+    <div>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname" value="Vinod">
+    </div><br>
+
+
+    <div>
+        <label for="course">Course</label>
+        <select id="course" name="course">
+            <option value="cmjd">CMJD</option>
+            <option value="gdse">GDSE</option>
+            <option value="dep" selected>DEP</option>
+        </select>
+    </div>
+
+
+</form>
+
+
+
+
+</body>
+</html>

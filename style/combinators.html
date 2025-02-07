@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinators</title>
+    <style>
+        /*Child combinator*/
+        section>h1{
+            color:red;
+        }
+
+        /*Decendent Combinator*/
+        section h1{
+            color:red;
+        }
+
+        /*Adjacent Combinator -- h2 ta passe lagama tiyana h3 ekata style eka apply wenne, h2 ta passe h3 kalin paragraph ekak hari wena mokak hari tibbot apply wen na*/
+        h2+h3{
+            background: black;
+        }
+
+        /*General Sibilings Combinator*/
+        /*        h2 ta passe ekelin tiyana siyaluma html tags walata style eka add wenawa */
+
+        h2~h3{ /*h3 child tag ekk widihata hitiyot add wen na h2 kelinma tiyenna one*/
+            color: lawngreen;
+        }
+    </style>
+
+
+</head>
+<body>
+<h1>Software Engineering</h1>
+<section>
+    <h1>Software Engineering Module 01</h1>
+
+    <div>
+        <h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam excepturi fuga ipsam nemo numquam quam quod sit ullam! Animi delectus eos perspiciatis. A aspernatur cum esse iste nobis, nulla sapiente?
+        </h1>
+    </div>
+
+</section>
+
+<h2>Hello H2</h2>
+<!--
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci alias asperiores cum dolores eius eligendi fugiat harum laboriosam magnam modi nam pariatur praesentium provident, quam saepe, ullam? Odio.</p>
+-->
+<h3>Hello H3</h3>
+<!--
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem, dicta eligendi et expedita magni minus nesciunt odit quaerat quibusdam sapiente sequi suscipit tempore! Itaque minus modi nemo sint. Sequi.</p>
+-->
+<h3>Hello H3</h3>
+<div>
+    <h3>Hello H3</h3>
+</div>
+</body>
+</html>

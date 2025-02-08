@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Sizing</title>
+    <style>
+        div{
+            width: 500px;
+            height: 200px;
+            background: deepskyblue;
+            margin: 10px;
+
+
+
+        }
+
+        #div2{
+            /*border: 10px solid darkblue; !*now new width is like 500+10+10px (methandi border eka elemet eken eliye allaganne*!*/
+            border: 10px solid darkblue;
+            box-sizing: border-box ;/* border-box dunnama athulen allaganne re sixe wen na div eke width ekamai ganne(500px)*/
+            /*
+            box-sizing:content-box ; !*default enne content box etakota eliyen allaganne div eke width ekata border size ekat add wenawa*!
+            */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id="div2"></div>
+</body>
+</html>

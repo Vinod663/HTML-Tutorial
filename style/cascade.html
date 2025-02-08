@@ -18,11 +18,39 @@
 
         /*100>1 nisaa #my-id eka tama apply wenne*/
 
+        p{/*0,0,0,1*/
+            color: red;
+        }
+
+        section>p{ /*section-->0,0,0,1 | >-->0,0,0,0 | p-->0,0,0,1*/
+                    /*Total=0,0,1,0*/
+            color: lawngreen;
+        }
+
+        section>.my-class{ /*section-->0,0,0,1 | >-->0,0,0,0 | .my-class-->0,0,1,0*/
+                            /*Total=0,0,1,1*/
+            color: darkmagenta;
+        }
+
+        #id.my-class{ /*0,1,0,0 | 0,0,1,0*/   /*Total=0,1,1,0*/
+            color: aqua;
+        }
+
+        .my-class{ /*0,0,1,0*/
+            color: blue;
+        }
+
 
     </style>
 </head>
 <body>
 <button style="color: lawngreen" id="my-id">Click</button> <!--dan apply wenne inline css eka eke value eka 1000 nisa-->
+
+<section>
+    <p class="my-class" id="id">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet asperiores aut consequuntur ex hic non obcaecati quia quis sit. Natus nulla praesentium voluptate voluptatem voluptates. Ad dolorem error quidem!
+    </p>
+</section>
 
 </body>
 </html>

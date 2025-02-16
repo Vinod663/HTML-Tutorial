@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <style>
+        /*div{
+            !*width: 200px;
+            !*height: 200px;*!
+            aspect-ratio: 1/1; !*width eke size eka keeyada e size ekatama height ekath ganna *!
+            background-color: orange;
+            border: 1px solid black;
+
+            !*position type ekakwat deela nathnm eya in default inne static kiyana position ekee*!
+
+            position: relative;
+            !*top,bottom,left,right*!
+            left: 200px;
+            top: 100px;*!
+
+
+        }*/
+
+        /*main{
+            width: 1200px;
+            height: 600px;
+            border: 2px solid red;
+            position: relative;
+        }
+
+        section{
+            width: 1000px;
+            height: 500px;
+            !*position: relative;*!
+            border: 2px solid darkblue;
+        }
+
+        div{
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: orange;
+            border: 1px solid black;
+
+            position: absolute;
+            !*
+            top,bottom,left,right
+            *!
+            right: 0px;
+
+        }*/
+
+
+
+
+        /*section{
+            width: 1000px;
+            height: 500px;
+            border: 3px solid black;
+            position: relative;
+        }
+
+        div{
+            width: 100px;
+            aspect-ratio: 1/1;
+            position: absolute;
+        }
+
+        section>div{
+            background-color: darkblue;
+            right: 0px;
+        }
+
+        section>div:nth-child(2){
+            background-color: greenyellow;
+            bottom: 0px;
+        }
+
+        section>div:nth-child(3){
+            background-color: darkviolet;
+            left: 0px;
+        }
+
+        section>div:nth-child(4){
+            background-color: hotpink;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        section>div:last-child{
+            background-color: seagreen;
+            !*left: calc(900px/2);
+            top: calc(400px/2);*!
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+
+            !*margin: auto; margin eka top.bottom,left,right walata galapenna auto hadagannawa*!
+
+        }*/
+
+        section{
+            width: 100vw;
+            height: 100vh;
+
+            position: relative;
+        }
+
+        div{
+            position: absolute;
+            width: 50%;
+            height: 50%;
+
+        }
+
+        section>div>div{
+            width: 100px;
+            height: 100px;
+            border-radius: 360px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        section>div>div>div{
+            width: 50%;
+            height: 50%;
+            aspect-ratio: 1/1;
+            border-radius: 360px 0 0 0;
+            background-color: darkseagreen;
+            position: absolute;
+        }
+
+        section>div>div>div:nth-child(2){
+            width: 50%;
+            height: 50%;
+            aspect-ratio: 1/1;
+            border-radius: 0 0 360px 0;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        section>div{
+            background-color: red;
+            right: 0;
+        }
+
+        section>div:nth-child(2){
+            background-color: hotpink;
+            left: 0;
+        }
+
+        section>div:nth-child(3){
+            background-color: darkblue;
+            left: 0;
+            bottom: 0;
+        }
+
+        section>div:nth-child(4){
+            background-color: greenyellow;
+            right: 0;
+            bottom: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--<main>
+    <section>
+        <div></div>
+    </section>
+</main>-->
+
+<!--parent order -&#45;&#45;&#45;&#45;&#45;&#45; body>main>section>div  (methanin lagama inna qualified parent ta anuwa tama absolute child postion wenne)-->
+
+
+<!--<div></div>-->
+
+<!--<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</section>-->
+
+<section>
+    <div><div><div></div><div></div></div></div>
+    <div><div><div></div><div></div></div></div>
+    <div><div><div></div><div></div></div></div>
+    <div><div><div></div><div></div></div></div>
+</section>
+</body>
+</html>

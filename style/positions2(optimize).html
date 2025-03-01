@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <style>
+        body{
+            overflow:hidden; /*hide karanne childs lage waten eliyata paina ewa(under the rows)*/
+        }
+
+        body>.main{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        body>.main>div{
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            position: absolute;
+            border-radius: 100%;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        body>.main>div>div{
+            width: 50%;
+            height: 50%;
+            background-color: maroon;
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        body>.main:first-child{
+            width: 50%;
+            height: 50%;
+            background-color: green;
+            position: absolute;
+        }
+
+        body>.main:nth-child(2){
+            width: 50%;
+            height: 50%;
+            background-color: brown;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        body>.main:nth-child(3){
+            width: 50%;
+            height: 50%;
+            background-color: orange;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        body>.main:nth-child(4){
+            width: 50%;
+            height: 50%;
+            background-color: cadetblue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        body>div:nth-child(5){
+            width: 15vw;
+            aspect-ratio: 1/1;
+            background: white;
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        body>div:nth-child(5)>div{
+            width: 5vw;
+            aspect-ratio: 1/1;
+            background: brown;
+            position: absolute;
+            border-radius: 100%;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        body>.corner{
+            width: 100px;
+            aspect-ratio: 1/1;
+            background: white;
+            position: absolute;
+        }
+
+        body>div:nth-child(6){
+            border-radius:0 0 360px 0 ;
+            top: 0;
+            left: 0;
+        }
+
+        body>div:nth-child(7){
+            border-radius:0 0 0 360px ;
+            top: 0;
+            right: 0;
+        }
+
+        body>div:nth-child(8){
+            border-radius:0 360px 0 0 ;
+            bottom: 0;
+            left: 0;
+        }
+
+        body>div:nth-child(9){
+            bottom: 0;
+            right: 0;
+            border-radius:360px 0 0 0 ;
+        }
+
+        body>div:nth-child(10){
+            top: -5vh;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 0 0 100% 100%;
+        }
+
+        body>div:nth-child(11){
+            right: 0;
+            left: 0;
+            bottom: -5vh;
+            margin: auto;
+            /*border-top-left-radius:100%;
+            border-top-right-radius:100%;*/
+            border-radius: 100% 100% 0 0;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>
+        <div></div>
+    </div>
+</div>
+
+<div class="main">
+    <div>
+        <div></div>
+    </div>
+</div>
+
+<div class="main">
+    <div>
+        <div></div>
+    </div>
+</div>
+
+<div class="main">
+    <div>
+        <div></div>
+    </div>
+</div>
+
+<div>
+    <div>
+        <div></div>
+    </div>
+</div>
+
+<div class="corner"></div>
+<div class="corner"></div>
+<div class="corner"></div>
+<div class="corner"></div>
+
+<div class="corner"></div>
+<div class="corner"></div>
+
+
+
+
+</body>
+</html>

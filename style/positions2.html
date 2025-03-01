@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="/assets/lib/normalize.css">
+  <style>
+    section{
+      width: 100vw;
+      height: 100vh;
+
+
+      position: relative;
+    }
+
+    div{
+      position: absolute;
+      width: 50%;
+      height: 50%;
+
+    }
+
+    section>div{
+      background-color: green;
+      right: 0;
+    }
+
+    section>div:nth-child(2){
+      background-color: brown;
+      left: 0;
+    }
+
+    section>div:nth-child(3){
+      background-color: orange;
+      left: 0;
+      bottom: 0;
+    }
+
+    section>div:nth-child(4){
+      background-color: darkmagenta;
+      right: 0;
+      bottom: 0;
+    }
+
+
+    /*kotuwala mada wurataya*/
+    section>div>div:nth-child(3){
+      width: 150px;
+      height: 150px;
+      border-radius: 360px; /*100%*/
+      background-color: white;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+    }
+
+    /*kotuwala mada wurtaye mada kotuwa*/
+    section>div>div:nth-child(3)>div{
+      background-color: brown;
+        /*width: 5vw;
+        aspect-ratio: 1/1;
+        position: absolute;*/
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+    }
+
+    /*mada arad wurthaya*/
+    section>div:nth-child(2)>div:first-child{
+      background-color: white;
+      width: 100px;
+      height: 100px;
+      border-radius:0 0 360px 0 ;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    section>div:nth-child(2)>div:nth-child(2){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      border-radius:0 0 0 360px ;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    section>div:first-child>div:nth-child(2){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      border-radius:0 0 360px 0 ;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    section>div:nth-child(3)>div:nth-child(2){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      border-radius:360px 0 0 0 ;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    section>div:last-child>div:nth-child(2){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      border-radius:0 360px 0 0 ;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    /*corners of squares*/
+    section>div:first-child>div:first-child{
+      background-color: white;
+      width: 100px;
+      height: 100px;
+      border-radius:0 0 0 360px ;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    section>div:nth-child(3)>div:first-child{
+      background-color: white;
+      width: 100px;
+      height: 100px;
+      border-radius:0 360px 0 0 ;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    section>div:last-child>div:first-child{
+      background-color: white;
+      width: 100px;
+      height: 100px;
+      border-radius:360px 0 0 0 ;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+
+
+    /*okkogema mada(uda) kotuwa and rawma*/
+    section>div:first-child>div:nth-child(4){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    section>div:first-child>div:nth-child(4)>div{
+      background-color: brown;
+      width: 40px;
+      height: 40px;
+      border-radius: 0 360px 0 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    section>div:nth-child(2)>div:nth-child(4){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    section>div:nth-child(2)>div:nth-child(4)>div{
+      background-color: brown;
+      width: 40px;
+      height: 40px;
+      border-radius: 360px 0 0 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    section>div:nth-child(3)>div:nth-child(4){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    section>div:nth-child(3)>div:nth-child(4)>div{
+      background-color: brown;
+      width: 40px;
+      height: 40px;
+      border-radius: 0 0 0 360px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    section>div:last-child>div:nth-child(4){
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    section>div:last-child>div:nth-child(4)>div{
+      background-color: brown;
+      width: 40px;
+      height: 40px;
+      border-radius: 0 0 360px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+
+
+  </style>
+</head>
+<body>
+<section>
+  <div><div></div><div></div><div><div></div></div><div><div></div></div></div>
+  <div><div></div><div></div><div><div></div></div><div><div></div></div></div>
+  <div><div></div><div></div><div><div></div></div><div><div></div></div></div>
+  <div><div></div><div></div><div><div></div></div><div><div></div></div></div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media-Query</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/lib/normalize.css">
+  <style>
+  /*@media all and (max-width:800px){
+    h1{
+      background: yellow; !*800ta wada adu wenoth or 800 wunoth witarai apply wenne max-width:800px nm*!
+    }
+  }*/
+  /*@media all and (min-width:800px){
+    h1{
+      background: yellow; !*800ta wada wadi wenoth or 800 wonoth witarai apply wenne min-width:800px nm*!
+    }
+  }*/
+
+  header{
+    background-color: #f0b7a1;
+    height: 80px;
+    position: relative;
+
+  }
+  #logo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 1vw;
+  }
+
+  #navigation{
+    width: fit-content;
+    height: fit-content;
+    position: absolute; /*absolute position eke child kenekwa position kireemata eyata width ekakui height ekakui deela tiyenna one*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  #navigation>a{
+    margin-left: 2vw;
+  }
+
+  #Menu{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+  }
+
+  @media all and (max-width: 500px) {
+    #Menu{
+      display: block;
+    }
+
+    #navigation{
+      display: none;
+    }
+
+  }
+
+  </style>
+</head>
+<body>
+<!--<h1>Hello</h1>-->
+<header id="header">
+  <img src="assets/png/ijse@1x.png" alt="IJSE" title="IJSE" width="150px" id="logo">
+  <nav id="navigation">
+
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Career</a>
+      <a href="#">Contact</a>
+
+  </nav>
+  <button id="Menu">Menu</button>
+</header>
+
+</body>
+</html>

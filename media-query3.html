@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive-Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css">
+    <style>
+        header{
+            background-color: darkslategray;
+            height: 70px;
+            position: relative;
+
+        }
+        #logo{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 1vw;
+        }
+
+        #navigation{
+            width: fit-content;
+            height: fit-content;
+            position: absolute; /*absolute position eke child kenekwa position kireemata eyata width ekakui height ekakui deela tiyenna one*/
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        #navigation>a{
+            margin-left: 2vw;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #navigation>a:hover,#navigation>a:active{
+            color:red;
+
+        }
+        #bars{
+            height: fit-content;
+            width: fit-content;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            display: none;
+           /* top: 0;
+            bottom: 0;
+            margin: auto;*/
+        }
+        .hero{
+            position: relative;
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(2,1fr);
+            border: black solid 2px;
+            top: 10vh;
+
+        }
+
+        .hero-left{
+            height: fit-content;
+            position: relative;
+            top: 10vh;
+            left: 1vw;
+        }
+        .hero-left>b:first-child{
+            font-size: 40px;
+            color:darkslategray ;
+        }
+        .hero-right{
+            width: 100px;
+            aspect-ratio: 1/1;
+            background-color: #752201;
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <img src="assets/png/ijse@1x.png" alt="IJSE" title="IJSE" width="150px" id="logo">
+    <i id="bars" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+    <nav id="navigation">
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Career</a>
+        <a href="#">Contact</a>
+
+    </nav>
+    <section class="hero">
+        <div class="hero-left">
+            <!--Left side of Hero Section-->
+            <b>Hi There! I’m</b></span>
+            <h1>Vinod Niloshana</h1>
+            <b>And I’m Full-Stack Developer </b>
+            <p>Creating seamless experiences from frontend to backend.<br> Keep scrolling to see my work in action.</p>
+
+            <button ><b>Explore</b></button>
+        </div>
+        <div class="hero-right"></div>
+    </section>
+
+</header>
+
+
+
+
+<script src="assets/lib/fontawesome/js/all.min.js"></script>
+</body>
+</html>

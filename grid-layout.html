@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid-Layout</title>
+    <style>
+        section{
+            width: 1000px;
+            height: 500px;
+            border: 5px solid black;
+            display: grid;/* if sections is grid div's are gird items*/
+            grid-template-columns: repeat(3,1fr);  /*1fr 1fr 1fr;*/ /*fr=fragmnets*/ /*1fr 1fr-------> 2 columns*/
+            /*grid-template-rows: repeat(2, 1fr);*/  /*1fr 1fr;*/ /*2 rows*/
+
+        }
+
+        div{
+            border: 5px solid black; /*div ekata height ekk dun nati unama grid eka deela tiyana section eke height eka grid items walata(div) samanawa bedala denawa*/
+            /*background-color: yellow;*/
+
+        }
+        section>div:first-child{
+            background-color: yellow;
+            /*grid-column: 1/3;*/ /*1 idan 3 wenakn alla ganna*/
+            grid-row:1/3;
+        }
+        section>div:nth-child(2){
+            background-color: orange;
+            grid-column: 2/4;
+        }
+        section>div:nth-child(3){
+            background-color: deepskyblue;
+        }section>div:nth-child(4){
+             background-color: darkblue;
+         }
+        section>div:nth-child(5){
+            background-color: darkslategray;
+        }
+        section>div:nth-child(6){
+            background-color: deeppink;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

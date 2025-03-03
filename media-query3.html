@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="/assets/lib/normalize.css">
     <link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css">
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+
+
+        }
         header{
             background-color: darkslategray;
+            width: 100%;
             height: 70px;
             position: relative;
+
 
         }
         #logo{
@@ -18,7 +28,9 @@
             top: 0;
             bottom: 0;
             margin: auto;
-            left: 1vw;
+            left: 60px;
+
+
         }
 
         #navigation{
@@ -33,7 +45,7 @@
         }
 
         #navigation>a{
-            margin-left: 2vw;
+            margin-left: 10px;
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -44,40 +56,152 @@
 
         }
         #bars{
-            height: fit-content;
-            width: fit-content;
             position: absolute;
-            right: 10px;
+            width: fit-content;
+            height: 4vh;
+            right: 60px;
             top: 0;
-            display: none;
-           /* top: 0;
             bottom: 0;
-            margin: auto;*/
+            margin: auto;
+            margin-right: 2vw;
+            display: none;
         }
+
         .hero{
             position: relative;
             display: grid;
             width: 100%;
             grid-template-columns: repeat(2,1fr);
-            border: black solid 2px;
-            top: 10vh;
+            /*border: black solid 2px;*/
+            top: 10px;
+
 
         }
 
         .hero-left{
             height: fit-content;
-            position: relative;
-            top: 10vh;
-            left: 1vw;
+            width: fit-content;
+            margin-left: 60px;
+            margin-top: 20px;
+            /*top: 10vh;*/
+            /*left: 1vw;
+            margin: auto;*/
+
         }
         .hero-left>b:first-child{
-            font-size: 40px;
+
+            font-size: 47px;
             color:darkslategray ;
+
         }
+        .hero-left>h1{
+            position: relative;
+            top: -50px;
+            font-size: 60px;
+            color: darkslategray;
+        }
+        .hero-left>b:nth-child(3){
+            position: relative;
+            top: -100px;
+            font-size: 33px;
+            color: lightseagreen;
+        }
+        .hero-left>p{
+            position: relative;
+            font-weight: bold;
+            bottom: 100px;
+            font-size: 20px;
+            color: cadetblue;
+        }
+        .hero-left>button{
+            position: relative;
+            bottom: 80px;
+            width: 150px;
+            height: 50px;
+            background-color: darkslategray;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
         .hero-right{
-            width: 100px;
-            aspect-ratio: 1/1;
-            background-color: #752201;
+            height: fit-content;
+            width: fit-content;
+            left: 0;
+            right: 0;
+            margin: auto;
+            /*margin-right: 20px*/
+            /*top: 10vh;*/
+            /*right: 1vw;
+            margin: auto;*/
+        }
+        .hero-right>img{
+            /*width: 500px;
+            height: auto;
+            position: relative;
+            left: 10vw;
+            bottom: 90px;*/
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            bottom: 80px;
+
+
+        }
+
+        .services{
+            position: relative;
+            bottom: 100px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            border: black solid 5px;
+            width: 100%;
+        }
+        .services>div{
+            height: 400px;
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        @media all and (max-width: 500px) {
+            #bars {
+                display: block;
+            }
+
+            #navigation {
+                display: none;
+            }
+
+            #logo{
+                left: 0;
+                right: 0;
+            }
+
+            .hero{
+                grid-template-columns: repeat(1,1fr);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                padding: 10px;
+
+            }
+
+            .hero-left{
+                margin: auto;
+                text-align: center;
+            }
+
+            /*.hero-left>button{
+                left: 50%;
+                transform: translateX(-50%);
+            }*/
+
+
         }
     </style>
 </head>
@@ -93,20 +217,29 @@
         <a href="#">Contact</a>
 
     </nav>
-    <section class="hero">
-        <div class="hero-left">
-            <!--Left side of Hero Section-->
-            <b>Hi There! I’m</b></span>
-            <h1>Vinod Niloshana</h1>
-            <b>And I’m Full-Stack Developer </b>
-            <p>Creating seamless experiences from frontend to backend.<br> Keep scrolling to see my work in action.</p>
-
-            <button ><b>Explore</b></button>
-        </div>
-        <div class="hero-right"></div>
-    </section>
-
 </header>
+
+<section class="hero">
+    <div class="hero-left">
+        <!--Left side of Hero Section-->
+        <b>Hi There! I’m</b>
+        <h1>Vinod Niloshana</h1>
+        <b>And I’m Full-Stack Developer </b>
+        <p>Creating seamless experiences from frontend to backend.<br> Keep scrolling to see my work in action.</p>
+
+        <button ><b>Explore</b></button>
+    </div>
+    <div class="hero-right">
+        <img src="assets/SVG/clubHouse.svg" alt="Club House" title="Club House">
+    </div>
+</section>
+
+<section class="services">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
 
 
 

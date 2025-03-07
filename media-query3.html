@@ -150,25 +150,106 @@
 
 
         }
+        .service{
+            position: relative;
+            bottom: 100px;
+        }
+        .service>h1{
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: darkslategray;
+            margin-top: 50px;
+        }
 
         .services{
             position: relative;
-            bottom: 100px;
             display: grid;
             grid-template-columns: repeat(4,1fr);
-            border: black solid 5px;
+           /* border: black solid 5px;*/
             width: 100%;
         }
         .services>div{
+            padding: 0 20px 0 20px;
             height: 400px;
-            background-color: lightgoldenrodyellow;
-            border: 1px solid black;
+            background-color: darkcyan;
+            border: 3px solid darkslategray;
+            margin: 10px 10px 10px 10px;
+            border-radius: 8%;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+
+        }
+        .services>div>h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+        .services>div>p{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: white;
             margin: 10px;
         }
 
-        @media all and (max-width: 500px) {
+        .awards{
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+             /*border: black solid 5px;*/
+            width: 100%;
+            margin-right: 200px;
+
+        }
+        .awards>div{
+            height: fit-content;
+            width: fit-content;
+            margin: 10px 10px 10px 10px;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+        }
+        .awards>div:nth-child(2){
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 20px;
+            color:darkcyan;
+            margin: 0 60px 0 0;
+            font-weight: bold;
+        }
+        .awards>div:first-child{
+            height: fit-content;
+            width: fit-content;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .award-section>h1{
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: darkslategray;
+            margin-left: 500px;
+            margin-bottom: 50px;
+        }
+
+
+
+
+        @media all and (max-width: 750px) {
             #bars {
                 display: block;
+                right: 20px;
             }
 
             #navigation {
@@ -195,6 +276,19 @@
                 margin: auto;
                 text-align: center;
             }
+            .hero-right>img{
+                /*width: 500px;
+                height: auto;
+                position: relative;
+                left: 10vw;
+                bottom: 90px;*/
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                bottom: 40px;
+
+
+            }
 
             /*.hero-left>button{
                 left: 50%;
@@ -202,6 +296,44 @@
             }*/
 
 
+        }
+
+        
+        @media all and (max-width: 1000px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media all and (max-width: 500px) {
+            .services {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media all and (max-width: 1200px) {
+            .awards {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .award-section>h1{
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .awards>div:nth-child(2){
+                margin: 20px 20px 20px 20px;
+            }
+            
+        }
+        @media all and (max-width: 600px) {
+            .awards>div:first-child{
+                width: 350px;
+                height: 200px;
+            }
+        }
+        @media all and (max-width:400px) {
+            .awards>div:first-child{
+                width: 300px;
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -234,12 +366,60 @@
     </div>
 </section>
 
-<section class="services">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+<section class="service">
+    <h1>Services</h1>
+    <section class="services">
+        <div>
+            <h1>Web Design</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+                </p>
+        </div>
+
+        <div>
+            <h1>UI/UX Design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+            </p>
+        </div>
+
+        <div>
+            <h1>Application & Software Development</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+            </p>
+        </div>
+
+        <div>
+            <h1>Graphic Design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi dolores eum excepturi impedit, in, odit quis quod repellendus sapiente soluta tempora temporibus. Ad eos praesentium sed vel vero.
+            </p>
+        </div>
+    </section>
 </section>
+
+<section class="award-section">
+    <h1>Awards</h1>
+    <div class="awards">
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/okOFF7vQDj8?si=OSNdLJ4Keb_itdWp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea quas voluptatem! Adipisci asperiores dolor ea eligendi eos harum, id illo libero molestias, mollitia non nulla perspiciatis placeat veniam veritatis?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea quas voluptatem! Adipisci asperiores dolor ea eligendi eos harum, id illo libero molestias, mollitia non nulla perspiciatis placeat veniam veritatis?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea quas voluptatem! Adipisci asperiores dolor ea eligendi eos harum, id illo libero molestias, mollitia non nulla perspiciatis placeat veniam veritatis?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea quas voluptatem! Adipisci asperiores dolor ea eligendi eos harum, id illo libero molestias, mollitia non nulla perspiciatis placeat veniam veritatis?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea quas voluptatem! Adipisci asperiores dolor ea eligendi eos harum, id illo libero molestias, mollitia non nulla perspiciatis placeat veniam veritatis?
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
 
 
 

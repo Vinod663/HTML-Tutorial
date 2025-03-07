@@ -243,6 +243,158 @@
             margin-bottom: 50px;
         }
 
+        .connect{
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /*border: black solid 5px;*/
+            width: 100%;
+            height: 400px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .connect div{
+            height: fit-content;
+            width: fit-content;
+            margin: 10px 10px 10px 10px;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+        }
+
+        .left-connect>h1{
+            font-size: 40px;
+            font-weight: bold;
+            color: darkslategray;
+            margin-left: 50px;
+
+        }
+
+        .left-connect>span:first-child{
+            bottom: 300px;
+        }
+        .email-icon{
+            position: relative;
+            left: 50px;
+            bottom: 20px;
+        }
+        .email{
+
+            margin-left: 80px;
+            margin-top: -45px;
+            top: 200px;
+            bottom: 40px;
+            font-size: 18px;
+            color: darkcyan;
+
+        }
+        .phone-icon{
+            position: relative;
+            left: 50px;
+            bottom: 20px;
+            margin-top: 5px;
+        }
+        .phone{
+            margin-left: 80px;
+            margin-top: -45px;
+            top: 200px;
+            bottom: 40px;
+            font-size: 18px;
+            color: darkcyan;
+        }
+        .social-icons{
+            position: relative;
+            left: 50px;
+            bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icons>img{
+            margin-right: 5px;
+            margin-top: 10px;
+            width: 35px;
+        }
+
+        .cv-button{
+            position: relative;
+            left: 50px;
+            width: 150px;
+            height: 40px;
+            background-color: darkslategray;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .contact-inputs{
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+            position: relative;
+            top: 40px;
+            width: 500px;
+
+        }
+        .contact-inputs>.text-inputs{
+            width: 45vw;
+            position: relative;
+            height: 40px;
+            margin-bottom: 5px;
+            border: 2px solid darkslategray;
+            background-color: rgba(0,139,139,0.4);
+            color: black;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        .contact-inputs>input::placeholder {
+            color: darkslategray; /* Change this to your desired color */
+        }
+        .contact-inputs>textarea{
+            width: 45vw;
+            position: relative;
+            height: 100px;
+            margin-bottom: 5px;
+            border: 2px solid darkslategray;
+            background-color: rgba(0,139,139,0.4);
+            color: black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .contact-inputs>textarea::placeholder{
+            color: darkslategray;
+        }
+        .submit-button{position: relative;
+            width: 45vw;
+            height: 40px;
+            margin-bottom: 5px;
+            color: white;
+            font-weight: bold;
+            border: 2px solid darkslategray;
+            background-color: rgba(0,139,139,1);
+            border-radius: 10px;
+            padding: 10px;
+
+
+        }
+
+        .copyright{
+            position: relative;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+
+
 
 
 
@@ -294,6 +446,38 @@
                 left: 50%;
                 transform: translateX(-50%);
             }*/
+            .connect{
+                grid-template-columns: repeat(1,1fr);
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                margin: auto;
+                align-items: center;
+                justify-content: center;
+                height: 750px;
+
+
+            }
+            .contact-inputs{
+                /*grid-column: 1/2;
+                grid-row: 1/2;*/
+                top: -100px;
+            }
+            .submit-button{
+                width: 97vw
+            }
+            .contact-inputs>textarea{
+                width: 97vw;
+            }
+            .contact-inputs>.text-inputs{
+                width: 97vw;
+            }
+            #left-connect{
+                margin-left: -40px;
+
+            }
+
 
 
         }
@@ -335,6 +519,7 @@
                 height: 180px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -417,9 +602,38 @@
     </div>
 </section>
 
+<footer class="connect">
+    <div class="left-connect" id="left-connect">
+        <h1>Connect me</h1>
+        <span ><img src="assets/Icons/icons8-email-50.png" alt="Email" title="Email" width="20px" class="email-icon" > </span><p class="email">vinodfernando048@gmail.com</p><br>
+        <span><img src="assets/Icons/icons8-call-50.png" alt="call" title="call" width="20px" class="phone-icon"> </span><p class="phone">+94 77 819 3985</p><br>
+        <span class="social-icons">
+            <img src="assets/Icons/317725_linkedin_social_icon%20(1).png" alt="LinkedIn" title="LinkedIn" width="40px">
+            <img src="assets/Icons/4747499_github_icon.png" alt="GitHub" title="GitHub" width="40px">
+            <img src="assets/Icons/5282544_camera_instagram_social%20media_social%20network_instagram%20logo_icon.png" alt="instar" title="instar" width="40px">
+            <img src="assets/Icons/317727_facebook_social%20media_social_icon%20(1).png" alt="Facebook" title="Facebook" width="40px">
+        </span><br>
+        <input type="button" value="Download CV" class="cv-button">
 
+    </div>
 
-
+    <div class="contact-inputs">
+        <input type="text" placeholder="Your Name" class="text-inputs"><br>
+        <input type="email" placeholder="Your Email"class="text-inputs"><br>
+        <input type="text" placeholder="Subject"class="text-inputs"><br>
+        <textarea
+                id="Message"
+                placeholder="Message"
+                rows="7"
+                cols="50"
+                name="Message"
+        ></textarea><br>
+        <input type="submit" placeholder="Submit" class="submit-button">
+    </div>
+</footer>
+<section class="copyright">
+    <p><strong> Copyright © 2025 Vinod Niloshana</strong></p>
+</section>
 
 
 

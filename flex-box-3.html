@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex part-3</title>
+  <style>
+      section{
+          width: 500px;
+          height: 500px;
+          border: 5px solid black;
+
+          display: flex;
+          justify-content: center; /*horizontally center*/
+
+          align-items: center; /*vertically center*/
+          /*start--> start corner
+          end--> end corner
+          center--> center*/
+      }
+
+      section>div{
+          width: 100px;
+          aspect-ratio: 1/1;
+          background: red;
+      }
+  </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex-Box</title>
+    <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <style>
+        section>div{
+           font-size: 50px;
+            color: red;
+            border: 2px solid black;
+            margin: 2px;
+            padding: 5px;
+
+        }
+        section{
+            display: flex;
+            /*flex-direction: column; *//*column dunnama childs tika column ekaka innawa wage position kara ganne eka dun nathnm
+                                    default tiya ganne row row ekak widihata inne*/
+            /*flex-direction: row;*/  /*--->row is default direction*/
+           /* flex-direction: row-reverse;*/ /*---> reveresed the child elements and display in row direction from right to left*/
+            /*flex-direction: column-reverse;*/ /*---> reveresed the child elements and display as column*/
+
+        }
+    </style>
+</head>
+
+<body>
+<section>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <style>
+        section{
+            box-sizing: border-box;
+            width: 100%;
+            height: 500px;
+            border: 2px solid deeppink;
+            background-color: pink;
+            display: flex;
+            justify-content: space-around;
+
+
+        }
+        section>div{
+            background: red;
+            border: 2px solid black;
+            aspect-ratio: 1/1;
+            width: 200px;
+
+        }
+        section>div:first-child{
+            align-self: flex-start;
+        }
+
+        section>div:nth-child(2){
+            align-self: center;
+        }
+        section>div:nth-child(3){
+            align-self: flex-end;
+        }
+        section>div:nth-child(4){
+            align-self: center;
+        }
+        section>div:nth-child(5){
+            align-self: start;
+        }
+        section>div:nth-child(6){
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>

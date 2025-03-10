@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    section{
+      border: 5px solid black;
+      height: 400px;
+      width: 1000px;
+      display: flex;
+  /*align-items: center;*/  /*flex box eke in íchild la okkotama apply we*/
+    }
+
+    section>div{
+      background: red;
+      border: 5px solid pink;
+      aspect-ratio: 1/1;
+      width: 100px;
+    }
+
+    section>div:first-child{
+      /*align-self: flex-start; */
+      align-self: center;
+    }
+    section>div:nth-child(2){
+      align-self:end;
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div></div>
+  <div></div>
+</section>
+
+</body>
+</html>

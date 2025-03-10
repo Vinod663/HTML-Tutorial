@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex part-2</title>
+  <!--<link rel="stylesheet" href="/assets/lib/normalize.css">-->
+  <style>
+    section{
+      display: flex;
+      /*justify-content: left; *//*default----------> align to center*/
+      /*justify-content: right;*/  /*align to right corner*/
+      /*justify-content: center;*/ /*align to center horizontally*/
+      /*justify-content: space-between; *//*align childs  and add equal space between childs (space eka child la atara)*/
+        /*justify-content: space-around;*/ /*align childs  and add equal space around childs(space eka tiyaganne child ge depattenma)*/
+        justify-content: space-evenly; /*align childs  and add equal space eventually betwwen childs(space eka smana agayak tama childs la atara tiyenne)*/
+    }
+    section>div{
+      background: red;
+      border: 2px solid black;
+      aspect-ratio: 1/1;
+      width: 100px;
+
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+
+</body>
+</html>

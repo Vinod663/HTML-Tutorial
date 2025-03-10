@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transition</title>
+    <style>
+        div{
+            background-color: blue;
+            width: 300px;
+            aspect-ratio: 1/1;
+            height: 300px;
+            /*transition-duration: 800ms; *//*eka style ekaka idan tawa style ekakata change wenna yana  time eka*/
+            /*
+            transition-duration: 3000ms;
+            */
+            /*transition-delay: 3s;*/ /*style eka apply wenn patan ganna eka delay karanawa*/
+            /*transition-timing-function: ease;*/ /*slow start, go fast,slow end*/
+            /*transition-property: width,background-color;*/ /*wenas wenna oone properties define karai*/
+
+            /*transition: all 300ms ease;*//*property , delay and timing-function----> 0ne for three sets*/
+            /*wenas wena hama property ekakakam transition duration eka 300ms add kraganna*/
+            transition: background-color 10s,width 3s; /*back-color eka change wenna 10s ganna width ekata 3s ganna*/
+        }
+
+        div:hover{
+            background-color: red;
+            /*
+            width: 500px;
+            */
+            width: 1000px;
+
+            /*
+            transform: rotate(360deg);
+            */
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

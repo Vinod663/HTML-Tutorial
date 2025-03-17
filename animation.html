@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        div{
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: lightblue;
+            border: 5px solid blue;
+
+
+            animation-name: my_rotate; /*apply wenna oone aanimation eka*/
+            animation-duration: 3s; /*apply wenna yana time eka*/
+            /*animation-delay: 5s;*/ /*animation eka apply wenna patan ganne me time eken passe*/
+            animation-iteration-count: infinite; /*animation eka aye aye kee parak apply wenna oneda kiyana eka*/
+            animation-direction: alternate; /*normal,reverse,alternate,alternate-reverse*/
+            /*reverse---.antima key fram eke idan palweni ekata yanna oneda kiyana ekata
+              alternate--> from---to gihin ti--from
+              alternate-reverse---> alternate wenne reverse ekata
+              */
+            animation-timing-function: ease-in-out; /*ease,ease-in,ease-out,linear,ease-out,ease-in-out*/
+
+        }
+
+        @keyframes my_rotate {
+            from {
+               /* transform: rotate(0deg);*/
+                background-color: lightblue;
+
+            }
+
+            to {
+                /*transform: rotate(360deg);*/
+                background-color: lightcoral ;
+                /*width: 300px;*/
+                margin-left: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

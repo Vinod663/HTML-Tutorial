@@ -1,0 +1,16 @@
+.custom-card{
+    margin: 20px;
+    box-shadow: 2px 2px 6px #000;
+}
+
+.custom-card-body>h5{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+
+}
+.custom-card-body>p{
+    font-size: 16px;
+    color: slateblue;
+
+}

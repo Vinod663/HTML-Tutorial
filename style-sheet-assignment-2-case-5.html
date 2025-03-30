@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-05</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css">
+    <style>
+        *{
+            overflow: hidden;
+        }
+        section{
+            position: absolute;
+            width: 400vw;
+            height: 200vh;
+            display: flex;
+
+            animation-name: move-background;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            /*animation-timing-function: ease-in-out;*/
+            /* Stops at each keyframe */
+
+            /*animation-delay: 5s;*/
+        }
+
+        img{
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+
+
+        }
+
+        @keyframes move-background {
+            0%{
+                margin-left: 0;
+
+            }
+            33.33%{
+                margin-left: -100vw;
+            }
+            66.66%{
+                margin-left: -200vw;
+            }
+            100%{
+                margin-left: -300vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <div> <img src="assets/Images/slide1.jpeg" alt="slide-1"> </div>
+    <div><img src="assets/Images/slide2.jpeg" alt="slide-2"></div>
+    <div><img src="assets/Images/slide3.jpeg" alt="slide-3"></div>
+    <div><img src="assets/Images/slide4.jpeg" alt="slide-4"></div>
+</section>
+
+
+<script src="assets/lib/fontawesome/js/all.min.js"></script>
+</body>
+</html>

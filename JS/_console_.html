@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+   /* console.log("Hello World")
+    console.error("Hello World");//debug karaganna use karai
+    console.warn("Hello World");//issue ekk wenna puluwan kiyala warn karanna use karai
+    console.info("Hello World");
+    console.table({id: 1, name: 'John', age: 30});*/
+    /*console.clear();*/
+
+    function getValue(){
+        var x=10;
+    }
+    console.log(x);//x function ekk atule define karaam eya accessible wenne ee function eka atule witarai eya block waldi hasirenawa wage script eke oona tanaka access karanna ba
+
+
+   /*The variable x is declared inside the function getValue(), so it is not accessible outside of that function. When you try to log x outside the function, it results in a "not defined" error.
+   To fix this, you need to move the console.log(x); statement inside the getValue() function or declare x outside the function.*/
+
+    /*if(true){
+        var y=20;
+        let z=30; //let,const access karanna ba block eken eliye
+    }
+    console.log(y);//var is accessible outside the block
+    console.log(z);//let,const access karanna ba block eken eliye*/
+
+   /**When you declare a variable using var, it is function-scoped.
+   *This means it is only limited inside the function where it is declared.
+   *But, if you declare var inside a block (like if or for), it still belongs to the whole function or script, not just the block.*/
+
+   /*🎯 Simple Rule to Remember:
+   --------------------------------
+   **var inside a function → Stays inside the function (Not accessible outside).
+   **var inside an if or for block → Acts like it’s declared at the top, so it’s accessible everywhere in that script or function
+*/
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
+    </style>
+</head>
+<body>
+<section>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+</section>
+
+<script>
+    let data=['A','B','C','D','E','F'];
+
+    const updateLetters=() =>{
+        let lastLetter=data.pop();
+        data.unshift(lastLetter);
+
+
+
+        /*document.getElementsByTagName("div")[0].innerText=data[0];
+        document.getElementsByTagName("div")[1].innerText=data[1];
+        document.getElementsByTagName("div")[2].innerText=data[2];
+        document.getElementsByTagName("div")[3].innerText=data[3];
+        document.getElementsByTagName("div")[4].innerText=data[4];
+        document.getElementsByTagName("div")[5].innerText=data[5];*/
+
+       /* for (let i=0;i<data.length;i++){
+            document.getElementsByTagName("div")[i].innerText=data[i];
+        }*/
+
+        data.map((value,index)=>{
+            document.getElementsByTagName("div")[index].innerText=value;
+        });
+
+    }
+
+    setInterval(updateLetters,3000);
+</script>
+</body>
+</html>

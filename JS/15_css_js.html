@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS in JS</title>
+</head>
+<body>
+<h1>Welcome to IJSE</h1>
+<h2>Welcome to Internet Technologies</h2>
+
+<script>
+document.getElementsByTagName("h1")[0].style.color = "red";
+document.getElementsByTagName("h1")[0].style.background = "pink";
+
+
+var styles="color:blue; background:yellow; font-size:30px; text-align:center; border:2px solid black";
+document.getElementsByTagName("h2")[0].style.cssText=styles;
+
+</script>
+</body>
+</html>

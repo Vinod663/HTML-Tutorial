@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+</head>
+<body>
+<h1>Welcome to jQuery</h1>
+<h2>Welcome to basics</h2>
+<h2>Welcome to advanced</h2>
+
+<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eum ipsa quasi quo repellat. Animi deserunt dicta eaque esse, nostrum quod sequi voluptatum! Dignissimos eligendi esse, laboriosam nesciunt praesentium quas.</p>
+
+<a href="#">Click Me</a>
+<a href="#">Validate</a>
+
+
+
+<script src="../assets/lib/jquery-3.7.1.min.js"></script>
+
+<script>
+    /*document.getElementsByTagName("h1")[0].style.background = "red";*/
+    $("h1").css("background", "red");
+    $(".description").css("color", "green");
+
+    var styles = "color:blue; background:yellow; font-size:30px; text-align:center; border:2px solid black";
+    document.getElementsByTagName("h2")[0].style.cssText = styles;
+
+    $("a").css({
+        "textDecoration": "none",
+        "color": "blue",
+        "background": "yellow",
+        "font-size": "50px",
+        "padding": "10px",
+        "text-align": "center",
+        "border": "2px solid blue"
+    });
+</script>
+</body>
+</html>

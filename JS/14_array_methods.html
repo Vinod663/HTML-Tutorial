@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Methods</title>
+</head>
+<body>
+
+<script>
+    //Array methods
+    //push() method- add element to the end of the array and return the new length of the array
+    let myarray = ['A', 'B', 'C'];
+    myarray.push('D'); //add element to the end of the array
+    console.log(myarray); // ['A', 'B', 'C', 'D']
+    myarray.push('F', 'G'); //add multiple elements to the end of the array
+    console.log(myarray); // ['A', 'B', 'C', 'D', 'F', 'G']
+
+    //pop() method- remove element from the end of the array and return it
+    myarray.pop(); //remove the last element of the array
+    console.log(myarray); // ['A', 'B', 'C', 'D', 'F']
+    myarray.pop(); //remove the last element of the array
+    console.log(myarray); // ['A', 'B', 'C', 'D']
+
+    //shift() method- remove element from the beginning of the array and return it
+    myarray.shift(); //remove the first element of the array
+    console.log(myarray); // ['B', 'C', 'D']
+
+    //unshift() method- add element to the beginning of the array and return the new length of the array
+    myarray.unshift('A'); //add element to the beginning of the array
+    console.log(myarray); // ['A', 'B', 'C', 'D']
+    myarray.unshift('hello');
+    console.log(myarray); // ['hello', 'A', 'B', 'C', 'D']
+
+    //concat() method- join two or more arrays and return a new array
+    let myarray2 = [100, 200, 300,400];
+    let myarray3 = myarray.concat(myarray2); //join two arrays
+    console.log(myarray3); // ['hello', 'A', 'B', 'C', 'D', 100, 200, 300, 400]
+
+
+    let x=[1,2,3,40];
+    console.log(x); // [1, 2, 3, 40]
+    let y=x;//y reference x
+    y[0]=100;
+    console.log(x); // [100, 2, 3, 40]
+    console.log(y); // [100, 2, 3, 40]
+
+    //shallow copy
+    //slice() method- copy elements from an array(shallow copy) and return a new array
+    let z=x.slice();//copy shallow copy of x to z
+    console.log(z); // [100, 2, 3, 40]
+    z[0]=200;
+    console.log(z); // [200, 2, 3, 40]
+    console.log(x); // [100, 2, 3, 40]
+
+    let z100=x.slice(2);//copy elements from index 2 to the end of the array
+    console.log(z100); // [3, 40]
+
+    let A= [10,20,30,40,50,60,70,80,90,100];
+    let z200=A.slice(2,6);//copy elements from index 2 to index 6( 2 weni index eke idan 6 wenidex eka dakwa 6 naa )
+    console.log(z200); // [30, 40, 50, 60]
+
+    let z300=A.slice(-8);//copy elements from index -9 to the end of the array(rina agayan patan ganne -1 idan wam pattata sankya rekawe wage , dana agayan 0 idan)
+    console.log(z300); // [20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+    let z400=A.slice(-5,-2);//copy elements from index -5 to index -2 (-2 wenakan kiwwama -2 aiti na)
+    console.log(z400); // [60, 70, 80]
+
+
+    //splice() method- add or remove elements from an array and return the removed elements
+    A.splice(6); //remove elements from index 6 to the end of the array
+    console.log(A); // [10, 20, 30, 40, 50, 60]
+
+    A= [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    A.splice(4,3); //remove 3 elements from index 4( 4-index number , 3-index count)
+    console.log(A); // [10, 20, 30, 40, 80, 90, 100]
+
+
+    //reverse() method- reverse the order of elements in an array
+    A= [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    A.reverse(); //reverse the order of elements in the array
+    console.log(A); // [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+
+    //sort() method- sort the elements of an array in ascending order
+    let B=[20,10,50,40,70,400,100,30,60,150];
+    B.sort();//not sort properly
+    console.log(B); // [10, 100, 150, 20, 30, 40, 50, 60, 70, 400]
+
+    B.sort((a,b)=>a-b); //sort the elements of an array in ascending order
+    console.log(B); // [10, 20, 30, 40, 50, 60, 70, 100, 150, 400]
+
+    B.sort((a,b)=>b-a); //sort the elements of an array in descending order
+    console.log(B); // [400, 150, 100, 70, 60, 50, 40, 30, 20, 10]
+
+    //map() method- create a new array with the results of calling a function for every element in the array
+    B.map(r => {console.log(r);}); // 400, 150, 100, 70, 60, 50, 40, 30, 20, 10
+
+    B.map((r,index) => {console.log(`${index} - ${r}`);});// 0 - 400, 1 - 150, 2 - 100, 3 - 70, 4 - 60, 5 - 50, 6 - 40, 7 - 30, 8 - 20, 9 - 10
+    console.log(B); // [400, 150, 100, 70, 60, 50, 40, 30, 20, 10]
+
+
+    //filter() method- create a new array with all elements that pass the test implemented by the provided function
+    let j=[1,2,3,4,5,6,7,8,9,10];
+    console.log(
+        j.filter(function (i){
+            return i%2==1; //return array with odd numbers
+        })
+    );
+
+    //forEach() method- execute a provided function once for each array element
+    j.forEach(function (i){
+        console.log(i); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10//like map method but not return a new array
+    });
+    //difference of map
+   console.log(j.map(r=>r));
+   console.log(j.map(r=>r*2));//for each eke me wage array ekk return karaganna ba map wala ehema return karaganna puluwan
+
+
+
+
+</script>
+</body>
+</html>

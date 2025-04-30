@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <button id="student_nav" class="nav-item btn btn-link">
+          Students
+        </button>
+        <button id="course_nav" class="nav-item btn btn-link">
+          Courses
+        </button>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--student content-->
+<section id="student_content">
+
+  <h1>Students</h1>
+
+  <div class="card"   style="width: 18rem;">
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="fname" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="fname">
+        </div>
+        <div class="mb-3">
+          <label for="lname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lname">
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <textarea class="form-control" id="address" style="height: 100px"></textarea>
+        </div>
+        <button id="student_save" type="button" class="btn btn-primary">Save</button>
+        <button id="student_reset" type="button" class="btn btn-primary">Reset</button>
+      </form>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Address</th>
+    </tr>
+    </thead>
+    <tbody id="student-tbody">
+    </tbody>
+  </table>
+</section>
+
+<!--courses section-->
+<section id="course_content">
+  <h1>Courses</h1>
+  <div class="card"   style="width: 18rem;">
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="course" class="form-label">Course Name</label>
+          <input type="text" class="form-control" id="course">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" style="height: 100px"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary">Reset</button>
+      </form>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Course</th>
+      <th scope="col">description</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</section>
+
+
+</body>
+<script src="../assets/lib/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="controller/StudentController.js"></script>
+<script>
+  $('#course_content').css("display","none");
+
+  $('#course_nav').on('click',function (){
+    $('#course_content').css("display","block");
+    $('#student_content').css("display","none");
+    localStorage.setItem("lastSelection","course");
+
+  });
+
+  $('#student_nav').on('click',function (){
+    $('#course_content').css("display","none");
+    $('#student_content').css("display","block");
+    localStorage.setItem("lastSelection","student");
+
+  })
+
+  function loadLastSelection(){
+    const lastSelection = localStorage.getItem("lastSelection");
+    if (lastSelection === "course") {
+      $('#course_content').css("display","block");
+      $('#student_content').css("display","none");
+    } else if (lastSelection === "student") {
+      $('#course_content').css("display","none");
+      $('#student_content').css("display","block");
+    } else {
+      // Default to showing the student content
+      $('#course_content').css("display","none");
+      $('#student_content').css("display","block");
+    }
+  }
+
+  window.onload=loadLastSelection();
+</script>
+</html>

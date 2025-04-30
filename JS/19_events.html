@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body>
+
+<button>Click Me</button>
+<button>RESET</button>
+
+<div style="background-color: #752201; width: 200px; height: 200px; margin-top: 20px;" id="box">
+</div><br>
+
+<input type="text" id="name">
+
+<!--<input type="text" id="myinput">-->
+
+<h1></h1>
+
+<button id="ok">OK</button>
+
+
+<script src="../assets/lib/jquery-3.7.1.min.js"></script>
+<script>
+  let btn = document.getElementsByTagName("button")[0];
+  /*btn.addEventListener('dblclick',function (){ //Anonymous function
+    console.log("Button Clicked");
+  });*/
+
+  /*btn.addEventListener('click',() => { //Arrow function->samahara advance parts waladi Arrow functions wada karan nati wenna puluwan
+    console.log("Button Clicked");
+  });*/
+
+  /*btn.addEventListener('dblclick',function (){ //
+    console.log("Double Clicked");
+  });*/
+
+  /*btn.addEventListener('mousedown',function (){ //mouse down event
+    console.log("Mouse Down");
+  });
+
+  btn.addEventListener('mouseup',function (){ //mouse up event
+    console.log("Mouse Up");
+  });
+
+  let div_element = document.getElementsByTagName("div")[0];
+
+    div_element.addEventListener('mouseover',function (){ //mouse over event
+        console.log("Mouse Over");
+    });
+
+  div_element.addEventListener('mouseout',function (){ //mouse out event
+    console.log("Mouse Out");
+  });
+
+  div_element.addEventListener('mousemove',function (){ //mouse move event
+    console.log("Mouse Move");
+  });*/
+
+  let input=document.getElementById("myinput");
+
+  /*input.addEventListener('keydown',function (){ //key down event
+    console.log("Key Down");
+  });
+
+    input.addEventListener('keyup',function (){ //key up event
+        console.log("Key Up");
+    });
+
+    input.addEventListener('keypress',function (){ //key press event
+        console.log("Key Press");
+    });*/
+
+    /*input.addEventListener('input',function (e){ //input event
+        console.log("Input: " + e.target.value); //e.target.value is used to get the value of the input field
+      document.getElementsByTagName("h1")[0].innerText=e.target.value; //e.target.value is used to get the value of the input field
+    });*/
+
+  /*btn.addEventListener('click', function () {
+    let value = document.getElementById('myinput').value;
+    console.log(value);
+  });
+
+  let reset_btn = document.getElementsByTagName('button')[1];
+  reset_btn.addEventListener('click', function () {
+    document.getElementById('myinput').value = "";
+  });*/
+
+  ////////////////////////////////////////////////
+  $("#ok").on('click', function () {
+    console.log("OK Button Clicked");
+  });
+
+  $("#ok").on('dblclick', function () {
+    console.log("OK Double Clicked");
+  });
+
+    $("#ok").on('mousedown', function () {
+        console.log("OK Mouse Down");
+    });
+
+    $("#ok").on('mouseup', function () {
+        console.log("OK Mouse Up");
+    });
+
+    $('#box').on('mouseover', function () {
+        console.log("OK Mouse Over");
+    });
+
+    $('#box').on('mouseout', function () {
+        console.log("OK Mouse Out");
+    });
+
+    $('#box').on('mousemove', function () {
+        console.log("OK Mouse Move");
+    });
+
+    $('#name').on('keydown', function () {
+        console.log("Key Down");
+    });
+
+    $('#name').on('keyup', function () {
+        console.log("Key Up");
+    });
+
+    $('#name').on('keypress', function (e) {
+        console.log("Key Press: "+ e.key); //e.key is used to get the key pressed
+        console.log(e.keyCode===13); //e.key==13 is used to check if the key pressed is Enter key
+        let value= document.getElementById('name').value;
+    });
+
+
+
+</script>
+</body>
+</html>

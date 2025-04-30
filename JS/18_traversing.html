@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <ul>
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>
+            <ol>,
+                <li>SL</li>
+                <li>UK</li>
+                <li>USA</li>
+            </ol>
+        </li>
+    </ul>
+</section>
+<script src="../assets/lib/jquery-3.7.1.min.js"></script>
+<script>
+    document.getElementsByTagName("li");//[li, li, li, li, li, li]
+    document.getElementsByTagName("li")[0];//Frontend
+    document.getElementsByTagName("li")[1].parentElement;//<ul>...</ul>//select parent element
+    document.getElementsByTagName("li")[5].parentElement;//<ol>...</ol>
+
+    document.getElementsByTagName("ol");//[ol]
+    document.getElementsByTagName("ol")[0];//<ol>...</ol>
+    document.getElementsByTagName("ol")[0].children;//[li, li, li]//get all children of ol
+    document.getElementsByTagName("ol")[0].children[0];//<li>SL</li>
+    document.getElementsByTagName("ol")[0].children[1];//<li>UK</li>
+    document.getElementsByTagName("ol")[0].children[2];//<li>USA</li>
+
+    document.getElementsByTagName("ol")[0].firstElementChild;//<li>SL</li>//get first child of ol
+    document.getElementsByTagName("ol")[0].lastElementChild;//<li>USA</li>//get last child of ol
+
+    document.getElementsByTagName("ul")[0].lastElementChild;//<li>USA</li>//get last child of ul
+    document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild;//<ol>...</ol>//get first child of last child of ul
+    document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.children;//[li, li, li]//get all children of first child of last child of ul
+    document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.children[0];//<li>SL</li>
+    document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.children[1];//<li>UK</li>
+    document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.children[2];//<li>USA</li>
+    document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.firstElementChild;//<li>SL</li>//get first child of first child of last child of ul
+    document.getElementsByTagName("ul")[0].lastElementChild.firstElementChild.lastElementChild;//<li>USA</li>//get last child of first child of last child of ul
+
+    $("ol");//[ol]
+    $("ol").parents();//[ul]//get all parents of ol
+    $("ol").parents("section");//[section]//get all parents of ol which are section
+    $("ol").parentsUntil("section");//get all parents of ol until section //section eka aran den na e wenakan tiyana parentsla tika okkoma aran denawa
+
+    $('ul').children();//[li, li, li]//get all children of ul
+    $('ul').children().eq(0);//<li>Frontend</li>//get first child of ul
+    $('ul').children().eq(1);//<li>Backend</li>//get second child of ul
+    $('ul').children().eq(2);//<li>...</li>//get third child of ul
+    $('ul').children().eq(2).children();//[ol]//get all children of third child of ul
+    $('ul').children().eq(2).children().eq(0);//<ol>...</ol>//get first child of third child of ul
+    $('ul').children().eq(2).children().eq(0).children();//[li, li, li]//get all children of first child of third child of ul
+    $('ul').children().eq(2).children().eq(0).children().eq(1);//<li>UK</li>//get second child of first child of third child of ul
+
+    $('ul').children().eq(2).children().eq(0).children().eq(1).text();//UK //get inner text
+    $('ul').children().eq(2).children().eq(0).children().eq(1).html();//UK //get inner html
+    $('ul').children().eq(2).children().eq(0).children().eq(1).text("India");//change the UK into India //update inner text
+</script>
+</body>
+</html>

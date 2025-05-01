@@ -1,7 +1,12 @@
 import {student_db,courses_db} from "../db/db.js";
 import StudentModel from "../model/StudentModel.js";
 
-
+// Load from localStorage if it exists
+const savedStudents = localStorage.getItem("student_data");
+if (savedStudents) {
+    student_db.push(...JSON.parse(savedStudents));
+}
+loadStudentTable();//
 
 //load student table
 function loadStudentTable() {
@@ -40,6 +45,9 @@ $('#student_save').on('click', function(){
 
     let student_data=new StudentModel(fname, lname, address);
     student_db.push(student_data);
+
+    localStorage.setItem("student_data", JSON.stringify(student_db));//
+
     console.log(student_db);
     loadStudentTable();
     clearStudentFields();
